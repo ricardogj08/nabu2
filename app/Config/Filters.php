@@ -58,7 +58,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $methods = [
-        'post' => ['csrf']
+        'post' => ['csrf'],
     ];
 
     /**
@@ -73,8 +73,8 @@ class Filters extends BaseConfig
     public $filters = [
         'auth-rates' => [
             'before' => [
-                'login*', 'register', 'auth/*'
-            ]
-        ]
+                'login*', 'register', 'auth/*',
+            ],
+        ],
     ];
 }
