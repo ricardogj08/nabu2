@@ -1,0 +1,63 @@
+{
+    "name": "nabu/nabu",
+    "type": "project",
+    "description": "Un sistema gestor de contenido (CMS) de artículos en Markdown para la Universidad de Guanajuato",
+    "homepage": "https://github.com/ricardogj08/nabu",
+    "license": "AGPL-3.0-or-later",
+    "version": "2.0.0",
+    "authors": [
+        {
+            "name": "Ricardo García Jiménez",
+            "email": "ricardogj08@riseup.net",
+            "role": "Backend Developer"
+        },
+        {
+            "name": "Juan José Ramírez López",
+            "email": "juan.ramirez.j99@gmail.com",
+            "role": "Frontend Developer"
+        },
+        {
+            "name": "Francisco Solís Martínez",
+            "email": "franciscosolism08@gmail.com",
+            "role": "Frontend Developer"
+        },
+        {
+            "name": "Fernando Andrés Chávez Gavaldón",
+            "email": "fernandochg26@gmail.com",
+            "role": "Backend Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4.0",
+        "codeigniter4/translations": "^4.2",
+        "codeigniter4/shield": "^1.0.0-beta"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^9.1",
+        "codeigniter/coding-standard": "^1.4"
+    },
+    "suggest": {
+        "ext-fileinfo": "Improves mime type detection for files"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "support": {
+        "forum": "http://forum.codeigniter.com/",
+        "source": "https://github.com/codeigniter4/CodeIgniter4",
+        "slack": "https://codeigniterchat.slack.com"
+    }
+}
