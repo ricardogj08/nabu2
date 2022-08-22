@@ -16,7 +16,7 @@ Un sistema gestor de contenido (CMS) de artículos en Markdown para la Universid
 
 ## Configuración
 
-Copia el archivo `env` (contiene todas las opciones de configuración del proyecto):
+Copia el archivo `env` a `.env` (contiene todas las opciones de configuración del proyecto):
 
     cp env .env
 
@@ -26,9 +26,11 @@ Construye la base de datos del proyecto:
 
     php spark db:create nabu
 
-Crea las tablas de la base de datos:
+Crea todas las tablas de la base de datos:
 
     php spark migrate --all
+
+* [Modelo relacional de la base de datos](https://drive.google.com/file/d/1ObBiFhC8VmIiILmaJ64crW2BtZin29bw/view?usp=sharing)
 
 ## Ejecución
 
@@ -38,8 +40,9 @@ Crea las tablas de la base de datos:
 
 ## Referencias
 
-* [Versión anterior de nabu.](https://git.disroot.org/ricardogj08/nabu)
-* [CodeIgniter4 User Guide.](https://codeigniter4.github.io/userguide/)
+* [Primera versión de nabu](https://git.disroot.org/ricardogj08/nabu)
+* [CodeIgniter4 User Guide](https://codeigniter4.github.io/userguide/)
+* [Shield Documentation](https://github.com/codeigniter4/shield/blob/develop/docs/index.md)
 
 ## Licencia
 
