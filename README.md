@@ -22,11 +22,11 @@ Copia el archivo `env` a `.env` (contiene todas las opciones de configuración d
 
 ## Base de datos
 
-Construye la base de datos del proyecto:
+Crea la base de datos del proyecto:
 
     php spark db:create nabu
 
-Crea todas las tablas de la base de datos:
+Construye todas las tablas de la base de datos:
 
     php spark migrate --all
 
