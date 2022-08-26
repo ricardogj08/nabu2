@@ -39,6 +39,21 @@ $routes->get('/', 'Home::index');
 
 service('auth')->routes($routes);
 
+$routes->presenter('posts', ['only' => ['index', 'show', 'new', 'create']]);
+
+$routes->presenter('comments', ['only' => ['create', 'delete']]);
+
+$routes->presenter('profiles', ['only' => ['show', 'edit', 'update', 'remove', 'delete']]);
+
+$routes->group('admin', ['namespace' => APP_NAMESPACE . '\Controllers\Admin'], static function ($routes) {
+    $routes->presenter('posts', ['only' => ['index', 'edit', 'update', 'delete']]);
+    $routes->presenter('users', ['only' => ['index', 'edit', 'update', 'delete']]);
+});
+
+$routes->presenter('subscriptions', ['only' => ['create', 'remove']]);
+
+$routes->presenter('favorites', ['only' => ['index', 'create', 'delete']]);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

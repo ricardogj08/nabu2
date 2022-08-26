@@ -1,0 +1,160 @@
+/**
+ * Orden de los estilos:
+ *    1. Posicionamiento
+ *    2. Modelo de caja
+ *    3. Tipografía
+ *    4. Visuales
+ *    5. Otros
+ * Metodología => BEM
+ */
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: var(--color-background);
+}
+
+.nav__logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    width: 100%;
+}
+
+.nav__logo-wrapper>a {
+    display: block;
+    width: 100%;
+}
+
+.nav__polygon {
+    display: none;
+}
+
+.nav__burger-icon {
+    color: black;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/**
+ * Estilos para el menú.
+ */
+.nav__menu {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: -85%;
+    top: 0;
+    bottom: 0;
+    list-style: none;
+    background-color: #FFF;
+    transition: all ease-in-out 600ms;
+}
+
+.nav__menu-is-active {
+    left: 0;
+    transition: all ease-in-out 600ms;
+    z-index: 1;
+}
+
+.nav__item-logo {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.nav__item--logo a {
+    display: block;
+}
+
+.nav__item {
+    /* background-color: hsla(237, 58%, 69%, 0.4); */
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 3px 20px;
+    margin-bottom: 15px;
+    gap: 0 10px;
+    position: relative;
+}
+
+.nav__item-is-active {
+    background-color: hsla(237, 58%, 69%, 0.4);
+}
+
+.nav__item-is-active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--color-secondary-purple);
+}
+
+.nav__item-tab {
+    display: block;
+}
+
+.nav__item:active {
+    background-color: hsla(237, 58%, 69%, 0.4);
+}
+
+.nav__item a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav__item span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-background);
+    background-color: var(--color-secondary-purple);
+}
+
+.nav__item .close__icon {
+    transform: rotate(180deg);
+}
+
+/**
+ * Estilos para la visualización del menú.
+ */
+.overlay {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 400ms linear;
+}
+
+.overlay__is-active {
+    opacity: 1;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
+}

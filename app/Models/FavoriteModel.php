@@ -11,6 +11,9 @@ class FavoriteModel extends Model
     protected $useAutoIncrement = false;
     protected $allowedFields    = ['post_id', 'user_id'];
 
+    // Dates
+    protected $useTimestamps = true;
+
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert   = [];
