@@ -15,7 +15,6 @@ class Posts extends ResourcePresenter
      */
     public function index()
     {
-
     }
 
     /**
@@ -27,7 +26,6 @@ class Posts extends ResourcePresenter
      */
     public function edit($slug = null)
     {
-
     }
 
     /**
@@ -40,7 +38,6 @@ class Posts extends ResourcePresenter
      */
     public function update($slug = null)
     {
-
     }
 
     /**
@@ -53,6 +50,5 @@ class Posts extends ResourcePresenter
      */
     public function delete($slug = null)
     {
-
     }
 }

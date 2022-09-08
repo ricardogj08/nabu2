@@ -15,7 +15,6 @@ class Comments extends ResourcePresenter
      */
     public function create()
     {
-
     }
 
     /**
@@ -29,6 +28,5 @@ class Comments extends ResourcePresenter
      */
     public function delete($slug = null)
     {
-
     }
 }

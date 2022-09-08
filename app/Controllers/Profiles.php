@@ -15,7 +15,6 @@ class Profiles extends ResourcePresenter
      */
     public function show($username = null)
     {
-
     }
 
     /**
@@ -28,7 +27,6 @@ class Profiles extends ResourcePresenter
      */
     public function edit($username = null)
     {
-
     }
 
     /**
@@ -42,7 +40,6 @@ class Profiles extends ResourcePresenter
      */
     public function update($username = null)
     {
-
     }
 
     /**
@@ -55,7 +52,6 @@ class Profiles extends ResourcePresenter
      */
     public function remove($username = null)
     {
-
     }
 
     /**
@@ -68,6 +64,5 @@ class Profiles extends ResourcePresenter
      */
     public function delete($username = null)
     {
-
     }
 }

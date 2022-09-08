@@ -14,7 +14,6 @@ class Users extends ResourcePresenter
      */
     public function index()
     {
-
     }
 
     /**
@@ -27,7 +26,6 @@ class Users extends ResourcePresenter
      */
     public function edit($username = null)
     {
-
     }
 
     /**
@@ -40,7 +38,6 @@ class Users extends ResourcePresenter
      */
     public function update($username = null)
     {
-
     }
 
     /**
@@ -53,6 +50,5 @@ class Users extends ResourcePresenter
      */
     public function delete($username = null)
     {
-
     }
 }

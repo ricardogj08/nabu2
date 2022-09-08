@@ -14,7 +14,6 @@ class Subscriptions extends ResourcePresenter
      */
     public function create()
     {
-
     }
 
     /**
@@ -26,6 +25,5 @@ class Subscriptions extends ResourcePresenter
      */
     public function remove($token = null)
     {
-
     }
 }

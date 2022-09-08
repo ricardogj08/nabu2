@@ -48,6 +48,5 @@ class Posts extends ResourcePresenter
      */
     public function create()
     {
-
     }
 }

@@ -15,7 +15,6 @@ class Favorites extends ResourcePresenter
      */
     public function index()
     {
-
     }
 
     /**
@@ -27,7 +26,6 @@ class Favorites extends ResourcePresenter
      */
     public function create()
     {
-
     }
 
     /**
@@ -41,6 +39,5 @@ class Favorites extends ResourcePresenter
      */
     public function delete($slug = null)
     {
-
     }
 }

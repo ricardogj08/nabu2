@@ -1,4 +1,5 @@
 <?php helper('html') ?>
+<?php helper('auth') ?>
 <div class="overlay"></div>
 <nav class="nav">
     <div class='nav__polygon'></div>
@@ -13,8 +14,9 @@
         <li class="nav__item">
             <span>&#9783;</span><?= anchor(url_to('Posts::index'), 'Muro', ['class' => 'nav__link-underline']) ?>
         </li>
-        <?php if (true): ?>
-            <?php if (true): ?>
+        <?php if (auth()->loggedIn()): ?>
+            <?php $user = auth()->user() ?>
+            <?php if ($user->inGroup('admin', 'moderator')): ?>
                 <li class="nav__item">
                     <span>&#128736;</span><?= anchor(url_to('Admin\Posts::index'), 'Administración') ?>
                 </li>
@@ -26,7 +28,7 @@
                 <span>&#10029;</span><?= anchor(url_to('Favorites::index'), 'Favoritos', ['class' => 'nav__link-underline']) ?>
             </li>
             <li class="nav__item">
-                <span>&#9787;</span><?= anchor(url_to('Profiles::show', 'ricardogj08'), 'ricardogj08', ['class' => 'nav__link-underline']) ?>
+                <span>&#9787;</span><?= anchor(url_to('Profiles::show', $user->username), $user->username, ['class' => 'nav__link-underline']) ?>
             </li>
             <li class="nav__item">
                 <span class="close__icon">&#10162;</span><?= anchor(url_to('logout'), 'Cerrar sesión') ?>
